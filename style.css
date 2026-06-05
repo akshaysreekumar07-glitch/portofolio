@@ -456,8 +456,8 @@ section {
 
 .profile-image-container {
   position: relative;
-  width: 260px;
-  height: 260px;
+  width: 180px;
+  height: 180px;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1594,8 +1594,8 @@ section {
   }
   
   .profile-image-container {
-    width: 220px;
-    height: 220px;
+    width: 150px;
+    height: 150px;
     margin: 0 auto;
   }
 
