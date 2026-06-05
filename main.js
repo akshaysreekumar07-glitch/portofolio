@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PORTFOLIO SCRIPTS - AKSHAY SREE
+   PORTFOLIO SCRIPTS - AKSHAY C
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -75,12 +75,10 @@ function initNavbar() {
       const element = document.getElementById(targetId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        // Highlight border briefly to guide the user
+        // Highlight border briefly to guide the user without neon glow
         element.style.borderColor = 'var(--accent-copper)';
-        element.style.boxShadow = '0 0 25px rgba(207, 138, 79, 0.4)';
         setTimeout(() => {
           element.style.borderColor = '';
-          element.style.boxShadow = '';
         }, 1500);
       }
     });
@@ -92,100 +90,9 @@ function initNavbar() {
    ========================================================================== */
 function initBackgroundCanvas() {
   const canvas = document.getElementById('bg-canvas');
-  const ctx = canvas.getContext('2d');
-
-  let width = (canvas.width = window.innerWidth);
-  let height = (canvas.height = window.innerHeight);
-
-  let particles = [];
-  const maxDistance = 120; // Connections limit
-  
-  // Responsive particle density
-  const particleCount = width < 768 ? 25 : 60;
-
-  class Particle {
-    constructor() {
-      this.x = Math.random() * width;
-      this.y = Math.random() * height;
-      // Circuit speed: slower and more grid-aligned near-static drift
-      this.vx = (Math.random() - 0.5) * 0.05;
-      this.vy = (Math.random() - 0.5) * 0.05;
-      this.size = Math.random() * 2 + 1;
-    }
-
-    draw() {
-      // Outer copper contact pad
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size + 1.5, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(207, 138, 79, 0.35)';
-      ctx.fill();
-
-      // Inner gold center pin
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = '#cfa054';
-      ctx.fill();
-    }
-
-    update() {
-      this.x += this.vx;
-      this.y += this.vy;
-
-      // Bounce off boundaries
-      if (this.x < 0 || this.x > width) this.vx *= -1;
-      if (this.y < 0 || this.y > height) this.vy *= -1;
-    }
+  if (canvas) {
+    canvas.style.display = 'none';
   }
-
-  // Setup loop
-  for (let i = 0; i < particleCount; i++) {
-    particles.push(new Particle());
-  }
-
-  function animate() {
-    ctx.clearRect(0, 0, width, height);
-
-    // Render & link
-    for (let i = 0; i < particles.length; i++) {
-      particles[i].update();
-      particles[i].draw();
-
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-
-        if (dist < maxDistance) {
-          ctx.beginPath();
-          // Circuit-style lines: draw L-shaped path occasionally
-          ctx.moveTo(particles[i].x, particles[i].y);
-          
-          if (dist > maxDistance * 0.7) {
-            // Straight connector
-            ctx.lineTo(particles[j].x, particles[j].y);
-          } else {
-            // L-shape logic simulating PCB trace routing
-            ctx.lineTo(particles[j].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-          }
-          
-          const alpha = (1 - dist / maxDistance) * 0.15;
-          ctx.strokeStyle = `rgba(170, 91, 40, ${alpha})`;
-          ctx.lineWidth = 0.8;
-          ctx.stroke();
-        }
-      }
-    }
-    requestAnimationFrame(animate);
-  }
-
-  animate();
-
-  // Resize handler
-  window.addEventListener('resize', () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-  });
 }
 
 /* ==========================================================================
