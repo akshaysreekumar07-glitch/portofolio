@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Portfolio of Akshay C - Electronics & Communication Engineering Student. Showcasing programming, electronics, IEEE leadership, and interactive engineering tools.">
+  <title>Akshay C | Electronics & Communication Engineering Student</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Particle Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Translucent Glassmorphic Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="40" stroke-dasharray="10 5" />
+          <path d="M30,50 L45,50 L55,35 L65,65 L75,50 L90,50" />
+          <circle cx="45" cy="50" r="3" fill="var(--accent-cyan)" />
+          <circle cx="75" cy="50" r="3" fill="var(--accent-cyan)" />
+        </svg>
+        <span>AKSHAY</span> C
+      </a>
+      
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about" class="active">About</a></li>
+          <li><a href="#experience">Leadership</a></li>
+          <li><a href="#academic">Academic</a></li>
+          <li><a href="#projects">Projects & Tools</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="hero-subtitle" style="color: var(--text-primary); text-shadow: none;">Hi, I'm Akshay C.</span>
+          <h1 class="hero-title">
+            <span>Electronics & Communication</span>
+            Engineering Student
+          </h1>
+          <p class="hero-description">
+            Enthusiastic student with a strong interest in electronics, programming, and artificial intelligence. Currently designing circuit prototypes and writing system solutions.
+          </p>
+          
+          <div class="hero-info-grid">
+            <div class="hero-info-item">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Thrissur, Kerala</span>
+            </div>
+            <div class="hero-info-item">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>akshaysreekumar07@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/akshaysreekumar07-glitch" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/akshay-c-157655380" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#experience" class="btn btn-primary">View My Experience</a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="circuit-wrapper pcb-theme">
+            <!-- SVG Glowing Technical PCB Board with flowing electrons and components -->
+            <svg class="pcb-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+              <!-- Grid background for PCB -->
+              <defs>
+                <pattern id="pcb-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0, 240, 255, 0.03)" stroke-width="1" />
+                </pattern>
+              </defs>
+              
+              <!-- Background grid -->
+              <rect width="300" height="300" fill="url(#pcb-grid)" rx="15" />
+              
+              <!-- Outer circular technical rings (static, subtle) -->
+              <circle cx="150" cy="150" r="135" stroke="rgba(0, 240, 255, 0.04)" stroke-width="1" fill="none" />
+              <circle cx="150" cy="150" r="115" stroke="rgba(157, 78, 221, 0.05)" stroke-width="1.5" stroke-dasharray="8 12" fill="none" />
+
+              <!-- Trace Paths (Copper tracks) -->
+              <!-- Trace 1: Left & Top-Left -->
+              <path id="trace-left" d="M 110 150 L 60 150 L 60 90 L 30 90" stroke="rgba(0, 240, 255, 0.15)" stroke-width="2" fill="none" />
+              <!-- Trace 2: Right & Bottom-Right -->
+              <path id="trace-right" d="M 190 150 L 240 150 L 240 210 L 270 210" stroke="rgba(157, 78, 221, 0.2)" stroke-width="2" fill="none" />
+              <!-- Trace 3: Top-Right -->
+              <path id="trace-top" d="M 150 110 L 150 60 L 220 60" stroke="rgba(0, 240, 255, 0.15)" stroke-width="2" fill="none" />
+              <!-- Trace 4: Bottom-Left -->
+              <path id="trace-bottom" d="M 150 190 L 150 240 L 80 240" stroke="rgba(157, 78, 221, 0.2)" stroke-width="2" fill="none" />
+
+              <!-- Active glowing tracks overlay -->
+              <path d="M 110 150 L 60 150 L 60 90 L 30 90" stroke="var(--accent-cyan)" stroke-width="1" fill="none" opacity="0.4" />
+              <path d="M 190 150 L 240 150 L 240 210 L 270 210" stroke="var(--accent-purple)" stroke-width="1" fill="none" opacity="0.4" />
+              <path d="M 150 110 L 150 60 L 220 60" stroke="var(--accent-cyan)" stroke-width="1" fill="none" opacity="0.4" />
+              <path d="M 150 190 L 150 240 L 80 240" stroke="var(--accent-purple)" stroke-width="1" fill="none" opacity="0.4" />
+
+              <!-- Resistor component along Trace 1 -->
+              <g transform="translate(60, 105)">
+                <rect x="-6" y="-12" width="12" height="24" rx="2" fill="#060913" stroke="var(--accent-cyan)" stroke-width="1.5" />
+                <!-- Color bands -->
+                <line x1="-6" y1="-6" x2="6" y2="-6" stroke="#e63946" stroke-width="1.5" />
+                <line x1="-6" y1="0" x2="6" y2="0" stroke="#ffb703" stroke-width="1.5" />
+                <line x1="-6" y1="6" x2="6" y2="6" stroke="#2a9d8f" stroke-width="1.5" />
+              </g>
+              
+              <!-- Capacitor component along Trace 2 -->
+              <g transform="translate(240, 165)">
+                <line x1="-10" y1="-3" x2="10" y2="-3" stroke="var(--accent-purple)" stroke-width="2.5" />
+                <line x1="-10" y1="3" x2="10" y2="3" stroke="var(--accent-purple)" stroke-width="2.5" />
+                <!-- Lead lines -->
+                <line x1="0" y1="-15" x2="0" y2="-3" stroke="rgba(157, 78, 221, 0.4)" stroke-width="1.5" />
+                <line x1="0" y1="15" x2="0" y2="3" stroke="rgba(157, 78, 221, 0.4)" stroke-width="1.5" />
+              </g>
+
+              <!-- LED Diode component along Trace 3 -->
+              <g transform="translate(185, 60) rotate(90)">
+                <polygon points="-8,-8 -8,8 6,0" fill="#060913" stroke="var(--accent-cyan)" stroke-width="1.5" />
+                <line x1="6" y1="-8" x2="6" y2="8" stroke="var(--accent-cyan)" stroke-width="1.5" />
+                <!-- Glow arrow indicators -->
+                <path d="M -2 -14 L 3 -19" stroke="var(--accent-cyan)" stroke-width="1" fill="none" />
+                <path d="M 3 -19 L 0 -19 M 3 -19 L 3 -16" stroke="var(--accent-cyan)" stroke-width="1" fill="none" />
+              </g>
+
+              <!-- Mini Oscilloscope Screen along Trace 4 (Bottom-Left) -->
+              <g transform="translate(25, 215)">
+                <!-- Bezel -->
+                <rect x="0" y="0" width="55" height="40" rx="4" fill="#0a0f1d" stroke="rgba(157, 78, 221, 0.4)" stroke-width="1.5" />
+                <!-- Screen Grid -->
+                <line x1="0" y1="20" x2="55" y2="20" stroke="rgba(157, 78, 221, 0.15)" stroke-width="0.5" stroke-dasharray="2 2" />
+                <line x1="27.5" y1="0" x2="27.5" y2="40" stroke="rgba(157, 78, 221, 0.15)" stroke-width="0.5" stroke-dasharray="2 2" />
+                <!-- Oscilloscope Sine Wave Animation -->
+                <path class="oscilloscope-wave" d="M 2 20 Q 12 5 22 20 T 42 20 T 53 20" stroke="var(--accent-cyan)" stroke-width="1.8" fill="none" />
+              </g>
+
+              <!-- Target Pads (Nodes) at ends -->
+              <circle cx="30" cy="90" r="4" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5" />
+              <circle cx="30" cy="90" r="1.5" fill="var(--accent-cyan)" />
+              
+              <circle cx="270" cy="210" r="4" fill="none" stroke="var(--accent-purple)" stroke-width="1.5" />
+              <circle cx="270" cy="210" r="1.5" fill="var(--accent-purple)" />
+              
+              <circle cx="220" cy="60" r="4" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5" />
+              <circle cx="220" cy="60" r="1.5" fill="var(--accent-cyan)" />
+
+              <!-- Animated Electron Particles (flowing along trace paths) -->
+              <circle r="4" fill="var(--accent-cyan)" style="filter: drop-shadow(0 0 4px var(--accent-cyan));">
+                <animateMotion dur="2.8s" repeatCount="indefinite" path="M 110 150 L 60 150 L 60 90 L 30 90" />
+              </circle>
+              
+              <circle r="4" fill="var(--accent-purple)" style="filter: drop-shadow(0 0 4px var(--accent-purple));">
+                <animateMotion dur="3.5s" repeatCount="indefinite" path="M 190 150 L 240 150 L 240 210 L 270 210" />
+              </circle>
+
+              <circle r="4" fill="var(--accent-cyan)" style="filter: drop-shadow(0 0 4px var(--accent-cyan));">
+                <animateMotion dur="2.2s" repeatCount="indefinite" path="M 150 110 L 150 60 L 220 60" />
+              </circle>
+
+              <circle r="4" fill="var(--accent-purple)" style="filter: drop-shadow(0 0 4px var(--accent-purple));">
+                <animateMotion dur="3s" repeatCount="indefinite" path="M 150 190 L 150 240 L 80 240" />
+              </circle>
+
+              <!-- Central Microcontroller Chip (IC) -->
+              <!-- Outer pins -->
+              <!-- Top & Bottom Pins -->
+              <rect x="117" y="102" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="129" y="102" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="141" y="102" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="153" y="102" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="165" y="102" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="177" y="102" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
+              
+              <rect x="117" y="190" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="129" y="190" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="141" y="190" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="153" y="190" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="165" y="190" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="177" y="190" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
+
+              <!-- Left & Right Pins -->
+              <rect x="102" y="117" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="102" y="129" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="102" y="141" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="102" y="153" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="102" y="165" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="102" y="177" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
+              
+              <rect x="190" y="117" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="190" y="129" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="190" y="141" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="190" y="153" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="190" y="165" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
+              <rect x="190" y="177" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
+
+              <!-- Main IC body -->
+              <rect x="110" y="110" width="80" height="80" rx="8" fill="#070b19" stroke="var(--accent-cyan)" stroke-width="2.5" style="filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.3));" />
+              
+              <!-- IC Core/Die artwork -->
+              <rect x="125" y="125" width="50" height="50" rx="4" fill="none" stroke="rgba(157, 78, 221, 0.4)" stroke-width="1" />
+              <circle cx="150" cy="150" r="14" fill="none" stroke="var(--accent-purple)" stroke-width="1.5" stroke-dasharray="3 3" style="filter: drop-shadow(0 0 3px var(--accent-purple));" />
+              <circle cx="150" cy="150" r="5" fill="var(--accent-cyan)" style="filter: drop-shadow(0 0 5px var(--accent-cyan));" />
+              
+              <!-- Label on IC -->
+              <text x="150" y="132" fill="var(--text-secondary)" font-family="Courier, monospace" font-size="8" font-weight="bold" text-anchor="middle" letter-spacing="1">ARM</text>
+              <text x="150" y="175" fill="rgba(0, 240, 255, 0.6)" font-family="Courier, monospace" font-size="6" text-anchor="middle">S2-ECE</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME & SKILLS -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Overview</span>
+          <h2 class="section-title">About <span>Me</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-narrative">
+            <p>
+              I am pursuing my **B.Tech in Electronics and Communication Engineering** at **Nehru College of Engineering and Research Centre (NCERC)**. Currently in my second semester (S2), I have been driven by a fascination with how hardware and software integrate to solve real-world challenges.
+            </p>
+            <p>
+              My focus lies in building solid foundational skills in circuit analysis, C programming, and understanding standard electronic components. I have a strong interest in technical events, innovation workshops, and collaborative problem-solving. I thrive in team environments where diverse minds come together to create technical solutions.
+            </p>
+            
+            <div class="about-stats">
+              <div class="stat-card glass-panel">
+                <div class="stat-val">S2 B.Tech</div>
+                <div class="stat-label">Academic Term</div>
+              </div>
+              <div class="stat-card glass-panel">
+                <div class="stat-val">IEEE CAS</div>
+                <div class="stat-label">Society Leadership</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills Grid -->
+          <div class="skills-container">
+            <!-- Programming -->
+            <div class="skill-category glass-panel">
+              <div class="skill-category-title">
+                <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+                Programming
+              </div>
+              <div class="skill-list">
+                <span class="skill-tag">C Programming (Basic)</span>
+              </div>
+            </div>
+
+            <!-- Electronics -->
+            <div class="skill-category glass-panel">
+              <div class="skill-category-title">
+                <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                Electronics
+              </div>
+              <div class="skill-list">
+                <span class="skill-tag">Basic Circuit Analysis</span>
+                <span class="skill-tag">Electronic Components Identification</span>
+                <span class="skill-tag">Electronics Fundamentals</span>
+              </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skill-category glass-panel">
+              <div class="skill-category-title">
+                <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                Tools
+              </div>
+              <div class="skill-list">
+                <span class="skill-tag">Microsoft PowerPoint</span>
+                <span class="skill-tag">Technical Presentation Preparation</span>
+                <span class="skill-tag">Tinkercad</span>
+                <span class="skill-tag">Antigravity</span>
+              </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="skill-category glass-panel">
+              <div class="skill-category-title">
+                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Soft Skills
+              </div>
+              <div class="skill-list">
+                <span class="skill-tag">Communication</span>
+                <span class="skill-tag">Event Organization</span>
+                <span class="skill-tag">Leadership</span>
+                <span class="skill-tag">Problem Solving</span>
+                <span class="skill-tag">Team Collaboration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOLUNTEERING & LEADERSHIP -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Involvement</span>
+          <h2 class="section-title">Volunteering & <span>Leadership</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="experience-layout">
+          <div class="experience-card glass-panel">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role">CAS Society Secretary</h3>
+                <div class="exp-org">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  IEEE Student Branch
+                </div>
+              </div>
+              <span class="exp-date">Active Leadership</span>
+            </div>
+            
+            <div class="exp-body">
+              <p class="exp-desc">
+                Serving as the Circuits and Systems (CAS) Society Secretary within the IEEE Student Branch. Responsibilities center around organizing technical events, promoting interest in hardware systems, and driving engagement across the student body.
+              </p>
+              
+              <ul class="exp-contributions">
+                <li>Assisted in organizing technical events, seminars, and workshops tailored for electronics students.</li>
+                <li>Collaborated closely with IEEE executive team members to plan and execute branch activities and local campaigns.</li>
+                <li>Promoted active participation in global and local IEEE initiatives, tech programs, and projects.</li>
+                <li>Supported smooth communication channels and resource coordination among branch members.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACADEMIC ACTIVITIES & TIMELINE -->
+    <section id="academic">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Milestones</span>
+          <h2 class="section-title">Academic & <span>Engagement</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <!-- Timeline Item: Education -->
+          <div class="timeline-item">
+            <div class="timeline-dot" style="border-color: var(--accent-cyan); box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);"></div>
+            <div class="timeline-content glass-panel">
+              <span class="timeline-time" style="color: var(--accent-cyan);">2025 — Present</span>
+              <h3 class="timeline-title">B.Tech in Electronics & Communication Engineering</h3>
+              <p class="timeline-desc" style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.4rem;">
+                Nehru College of Engineering and Research Centre (NCERC)
+              </p>
+              <p class="timeline-desc">
+                Building foundational expertise in circuit design, engineering mathematics, solid-state electronics, and computer systems engineering.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel">
+              <span class="timeline-time">S2 B.Tech Curriculum</span>
+              <h3 class="timeline-title">Programming in C</h3>
+              <p class="timeline-desc">
+                Developing foundational logical thinking by writing algorithms and basic console applications in C. Key projects include number classification solvers, comparison modules, and logic tests.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel">
+              <span class="timeline-time">Seminars & Presentations</span>
+              <h3 class="timeline-title">Technical Speaking & PPTs</h3>
+              <p class="timeline-desc">
+                Actively participating in technical seminars and delivering classroom presentations on electronics developments, refining technical slide design and presentation techniques.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel">
+              <span class="timeline-time">Extra-Curricular Focus</span>
+              <h3 class="timeline-title">Forums & Discussions</h3>
+              <p class="timeline-desc">
+                Engaging in structural technical discussions surrounding emerging technologies, hardware integration, and AI with peers and mentors.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel">
+              <span class="timeline-time">Goals</span>
+              <h3 class="timeline-title">Hackathons & Student Competitions</h3>
+              <p class="timeline-desc">
+                Cultivating a strong interest in upcoming student technical competitions, hackathons, and hardware design challenges.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS & INTERACTIVE WIDGETS -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Showcase</span>
+          <h2 class="section-title">Projects & <span>Demos</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="projects-layout">
+          <!-- Static Projects Grid -->
+          <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card glass-panel">
+              <div class="proj-top">
+                <div class="proj-icon-row">
+                  <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <div class="proj-links">
+                    <a href="#projects" class="widget-focus-trigger" data-widget="c-sim"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                  </div>
+                </div>
+                <h3 class="proj-title">C-Based Number Analyzer</h3>
+                <p class="proj-desc">
+                  A program built to check and compare properties of numbers (e.g. prime checks, comparisons, digit counts) using basic C control statements. Try the interactive terminal below.
+                </p>
+              </div>
+              <div class="proj-tags">
+                <span class="proj-tag">C Language</span>
+                <span class="proj-tag">Control Flow</span>
+                <span class="proj-tag">CLI</span>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card glass-panel">
+              <div class="proj-top">
+                <div class="proj-icon-row">
+                  <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  <div class="proj-links">
+                    <a href="#projects" class="widget-focus-trigger" data-widget="circ-calc"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                  </div>
+                </div>
+                <h3 class="proj-title">Resistor Band & Network Solver</h3>
+                <p class="proj-desc">
+                  A utility that decodes 4-band resistor color codes and solves basic series-parallel resistor/capacitor combinations. Features automated calculations. Try the solver below.
+                </p>
+              </div>
+              <div class="proj-tags">
+                <span class="proj-tag">Circuit Analysis</span>
+                <span class="proj-tag">Physics</span>
+                <span class="proj-tag">Calculators</span>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card glass-panel">
+              <div class="proj-top">
+                <div class="proj-icon-row">
+                  <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  <div class="proj-links">
+                    <a href="mailto:akshaysreekumar07@gmail.com"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+                  </div>
+                </div>
+                <h3 class="proj-title">Technical Presentation Slides</h3>
+                <p class="proj-desc">
+                  A collection of technical templates designed in PowerPoint focused on introducing semiconductor materials, logical gates, and standard transistor systems for class seminars.
+                </p>
+              </div>
+              <div class="proj-tags">
+                <span class="proj-tag">PowerPoint</span>
+                <span class="proj-tag">Hardware Seminars</span>
+                <span class="proj-tag">Documentation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Engineering Sandbox -->
+          <div class="widgets-area">
+            <div class="widget-section-header">
+              <h3>Engineering <span>Sandbox</span></h3>
+              <p>Explore live widgets simulating standard C logic and circuit mathematics constructed from Akshay's S2 curriculum.</p>
+            </div>
+
+            <div class="widgets-grid">
+              
+              <!-- WIDGET 1: C Simulator -->
+              <div class="widget-container glass-panel" id="c-sim">
+                <div class="widget-header">
+                  <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+                  <h4>C Logic Console Simulator</h4>
+                </div>
+                
+                <div class="c-simulator">
+                  <div class="code-selector">
+                    <button class="code-btn active" data-program="evenOdd">Even/Odd Check</button>
+                    <button class="code-btn" data-program="prime">Prime Number Check</button>
+                    <button class="code-btn" data-program="compare">Compare Two Numbers</button>
+                  </div>
+                  
+                  <div class="code-editor-mock" id="code-display">
+                    <!-- Loaded dynamically -->
+                  </div>
+
+                  <div class="sim-input-row" id="sim-inputs">
+                    <!-- Loaded dynamically -->
+                  </div>
+                  
+                  <div class="terminal-box">
+                    <div class="terminal-output" id="terminal-out">
+                      Click "Run Code" to start executing the C program...
+                    </div>
+                    <div class="terminal-status">Process status: IDLE</div>
+                  </div>
+                  
+                  <button class="btn btn-primary" id="btn-run-c" style="padding: 0.6rem 1rem; font-size: 0.85rem; align-self: flex-end;">
+                    <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor; stroke: none;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Run Code
+                  </button>
+                </div>
+              </div>
+
+              <!-- WIDGET 2: Circuit & Resistor Calculator -->
+              <div class="widget-container glass-panel" id="circ-calc">
+                <div class="widget-header">
+                  <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  <h4>Resistor & Network Solver</h4>
+                </div>
+                
+                <div class="circuit-calculator">
+                  <div class="calc-tabs">
+                    <button class="calc-tab active" data-calc="resistor">Resistor Color Code</button>
+                    <button class="calc-tab" data-calc="network">Series/Parallel Solver</button>
+                  </div>
+
+                  <!-- Resistor Color Calculator Tab -->
+                  <div class="calc-content active" id="calc-resistor-panel">
+                    <div class="resistor-bands-selector">
+                      <div class="band-select-group">
+                        <label>Band 1</label>
+                        <select class="band-select" id="band1">
+                          <option value="0" style="background: black; color: white;">Black</option>
+                          <option value="1" style="background: brown; color: white;" selected>Brown</option>
+                          <option value="2" style="background: red; color: white;">Red</option>
+                          <option value="3" style="background: orange; color: black;">Orange</option>
+                          <option value="4" style="background: yellow; color: black;">Yellow</option>
+                          <option value="5" style="background: green; color: white;">Green</option>
+                          <option value="6" style="background: blue; color: white;">Blue</option>
+                          <option value="7" style="background: violet; color: white;">Violet</option>
+                          <option value="8" style="background: gray; color: white;">Gray</option>
+                          <option value="9" style="background: white; color: black;">White</option>
+                        </select>
+                      </div>
+
+                      <div class="band-select-group">
+                        <label>Band 2</label>
+                        <select class="band-select" id="band2">
+                          <option value="0" style="background: black; color: white;" selected>Black</option>
+                          <option value="1" style="background: brown; color: white;">Brown</option>
+                          <option value="2" style="background: red; color: white;">Red</option>
+                          <option value="3" style="background: orange; color: black;">Orange</option>
+                          <option value="4" style="background: yellow; color: black;">Yellow</option>
+                          <option value="5" style="background: green; color: white;">Green</option>
+                          <option value="6" style="background: blue; color: white;">Blue</option>
+                          <option value="7" style="background: violet; color: white;">Violet</option>
+                          <option value="8" style="background: gray; color: white;">Gray</option>
+                          <option value="9" style="background: white; color: black;">White</option>
+                        </select>
+                      </div>
+
+                      <div class="band-select-group">
+                        <label>Multiplier</label>
+                        <select class="band-select" id="band3">
+                          <option value="1" style="background: black; color: white;">x1</option>
+                          <option value="10" style="background: brown; color: white;">x10</option>
+                          <option value="100" style="background: red; color: white;" selected>x100</option>
+                          <option value="1000" style="background: orange; color: black;">x1k</option>
+                          <option value="10000" style="background: yellow; color: black;">x10k</option>
+                          <option value="100000" style="background: green; color: white;">x100k</option>
+                          <option value="1000000" style="background: blue; color: white;">x1M</option>
+                        </select>
+                      </div>
+
+                      <div class="band-select-group">
+                        <label>Tolerance</label>
+                        <select class="band-select" id="band4">
+                          <option value="5" style="background: #d4af37; color: black;" selected>Gold (±5%)</option>
+                          <option value="10" style="background: #c0c0c0; color: black;">Silver (±10%)</option>
+                          <option value="1" style="background: brown; color: white;">Brown (±1%)</option>
+                          <option value="2" style="background: red; color: white;">Red (±2%)</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="resistor-graphic">
+                      <div class="resistor-band-visual resistor-band-1" id="vis-band-1"></div>
+                      <div class="resistor-band-visual resistor-band-2" id="vis-band-2"></div>
+                      <div class="resistor-band-visual resistor-band-3" id="vis-band-3"></div>
+                      <div class="resistor-band-visual resistor-band-4" id="vis-band-4"></div>
+                    </div>
+
+                    <div class="calc-result-box">
+                      <div class="calc-result-val" id="resistor-result">1,000 Ω (1 kΩ)</div>
+                      <div class="calc-result-lbl">Calculated Value (Gold: ±5% Tolerance)</div>
+                    </div>
+                  </div>
+
+                  <!-- Series/Parallel Tab -->
+                  <div class="calc-content" id="calc-network-panel">
+                    <div class="solver-inputs">
+                      <div class="solver-type-selector">
+                        <label><input type="radio" name="net-type" value="series" checked> Series Connection</label>
+                        <label><input type="radio" name="net-type" value="parallel"> Parallel Connection</label>
+                      </div>
+
+                      <div class="solver-type-selector">
+                        <label><input type="radio" name="comp-type" value="resistors" checked> Resistors (Ω)</label>
+                        <label><input type="radio" name="comp-type" value="capacitors"> Capacitors (µF)</label>
+                      </div>
+                      
+                      <div class="solver-values-row">
+                        <div class="solver-field">
+                          <label id="val1-label">Value 1 (R1)</label>
+                          <input type="number" id="net-val1" value="100" min="0.1" step="any">
+                        </div>
+                        <div class="solver-field">
+                          <label id="val2-label">Value 2 (R2)</label>
+                          <input type="number" id="net-val2" value="220" min="0.1" step="any">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="calc-result-box">
+                      <div class="calc-result-val" id="network-result">320.00 Ω</div>
+                      <div class="calc-result-lbl" id="network-result-label">Equivalent Resistance (Req)</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Communication</span>
+          <h2 class="section-title">Get In <span>Touch</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-panel">
+            <a href="mailto:akshaysreekumar07@gmail.com" class="contact-card glass-panel">
+              <div class="contact-card-header">
+                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <h4>Email Akshay</h4>
+              </div>
+              <p>akshaysreekumar07@gmail.com</p>
+              <div class="contact-action">
+                Write Email
+                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </a>
+            
+            <div class="contact-card glass-panel" style="cursor: default;">
+              <div class="contact-card-header">
+                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <h4>Location</h4>
+              </div>
+              <p>Thrissur, Kerala, India</p>
+            </div>
+
+            <a href="https://github.com/akshaysreekumar07-glitch" target="_blank" rel="noopener noreferrer" class="contact-card glass-panel">
+              <div class="contact-card-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <h4>GitHub Profile</h4>
+              </div>
+              <p>akshaysreekumar07-glitch</p>
+              <div class="contact-action">
+                View Repositories
+                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/akshay-c-157655380" target="_blank" rel="noopener noreferrer" class="contact-card glass-panel">
+              <div class="contact-card-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                <h4>LinkedIn Network</h4>
+              </div>
+              <p>Akshay C</p>
+              <div class="contact-action">
+                Connect on LinkedIn
+                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </a>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact-form-panel glass-panel" id="contact-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="form-name">Name</label>
+                <input type="text" id="form-name" placeholder="Your Name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="form-email">Email Address</label>
+                <input type="email" id="form-email" placeholder="email@example.com" required>
+              </div>
+              
+              <div class="form-group form-group-full">
+                <label for="form-subject">Subject</label>
+                <input type="text" id="form-subject" placeholder="What are you getting in touch about?" required>
+              </div>
+              
+              <div class="form-group form-group-full">
+                <label for="form-message">Message</label>
+                <textarea id="form-message" placeholder="Hi Akshay, I would like to talk about..." required></textarea>
+              </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" id="btn-submit-form">
+              <svg viewBox="0 0 24 24" style="width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.5;"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SUCCESS TOAST ALERT -->
+  <div class="toast" id="success-toast">
+    <div class="toast-icon">
+      <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 3;"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <span class="toast-msg">Message simulated successfully!</span>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="#hero" class="footer-logo">
+        <span>AKSHAY</span> C
+      </a>
+      
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Leadership</a></li>
+        <li><a href="#academic">Academic</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="footer-socials">
+        <a href="https://github.com/akshaysreekumar07-glitch" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/akshay-c-157655380" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+      
+      <div class="footer-credits">
+        Designed & Built by <span>Antigravity</span> | &copy; 2026 Akshay C.
+        <br>
+        Built with HTML5, CSS3 Variables & Vanilla JavaScript.
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
