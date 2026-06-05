@@ -16,13 +16,16 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="#hero" class="nav-logo">
-        <svg viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="40" stroke-dasharray="10 5" />
-          <path d="M30,50 L45,50 L55,35 L65,65 L75,50 L90,50" />
-          <circle cx="45" cy="50" r="3" fill="var(--accent-cyan)" />
-          <circle cx="75" cy="50" r="3" fill="var(--accent-cyan)" />
+        <svg viewBox="0 0 24 24" class="nav-compass-logo">
+          <circle cx="12" cy="4" r="2" />
+          <line x1="12" y1="6" x2="6" y2="20" />
+          <line x1="12" y1="6" x2="18" y2="20" />
+          <line x1="8.5" y1="14" x2="15.5" y2="14" />
+          <circle cx="12" cy="14" r="1.5" fill="currentColor" />
+          <line x1="6" y1="20" x2="5.5" y2="22" stroke-width="1.5" />
+          <line x1="18" y1="20" x2="18.5" y2="21.5" stroke-width="2.5" />
         </svg>
-        <span>AKSHAY</span> C
+        AKSHAY C
       </a>
       
       <nav>
@@ -48,11 +51,8 @@
     <section id="hero" class="hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <span class="hero-subtitle" style="color: var(--text-primary); text-shadow: none;">Hi, I'm Akshay C.</span>
-          <h1 class="hero-title">
-            <span>Electronics & Communication</span>
-            Engineering Student
-          </h1>
+          <span class="hero-greeting">Hi, I'm Akshay C.</span>
+          <h1 class="hero-title">Electronics & Communication Engineering Student</h1>
           <p class="hero-description">
             Enthusiastic student with a strong interest in electronics, programming, and artificial intelligence. Currently designing circuit prototypes and writing system solutions.
           </p>
@@ -84,148 +84,11 @@
         </div>
 
         <div class="hero-visual">
-          <div class="circuit-wrapper pcb-theme">
-            <!-- SVG Glowing Technical PCB Board with flowing electrons and components -->
-            <svg class="pcb-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-              <!-- Grid background for PCB -->
-              <defs>
-                <pattern id="pcb-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                  <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0, 240, 255, 0.03)" stroke-width="1" />
-                </pattern>
-              </defs>
-              
-              <!-- Background grid -->
-              <rect width="300" height="300" fill="url(#pcb-grid)" rx="15" />
-              
-              <!-- Outer circular technical rings (static, subtle) -->
-              <circle cx="150" cy="150" r="135" stroke="rgba(0, 240, 255, 0.04)" stroke-width="1" fill="none" />
-              <circle cx="150" cy="150" r="115" stroke="rgba(157, 78, 221, 0.05)" stroke-width="1.5" stroke-dasharray="8 12" fill="none" />
-
-              <!-- Trace Paths (Copper tracks) -->
-              <!-- Trace 1: Left & Top-Left -->
-              <path id="trace-left" d="M 110 150 L 60 150 L 60 90 L 30 90" stroke="rgba(0, 240, 255, 0.15)" stroke-width="2" fill="none" />
-              <!-- Trace 2: Right & Bottom-Right -->
-              <path id="trace-right" d="M 190 150 L 240 150 L 240 210 L 270 210" stroke="rgba(157, 78, 221, 0.2)" stroke-width="2" fill="none" />
-              <!-- Trace 3: Top-Right -->
-              <path id="trace-top" d="M 150 110 L 150 60 L 220 60" stroke="rgba(0, 240, 255, 0.15)" stroke-width="2" fill="none" />
-              <!-- Trace 4: Bottom-Left -->
-              <path id="trace-bottom" d="M 150 190 L 150 240 L 80 240" stroke="rgba(157, 78, 221, 0.2)" stroke-width="2" fill="none" />
-
-              <!-- Active glowing tracks overlay -->
-              <path d="M 110 150 L 60 150 L 60 90 L 30 90" stroke="var(--accent-cyan)" stroke-width="1" fill="none" opacity="0.4" />
-              <path d="M 190 150 L 240 150 L 240 210 L 270 210" stroke="var(--accent-purple)" stroke-width="1" fill="none" opacity="0.4" />
-              <path d="M 150 110 L 150 60 L 220 60" stroke="var(--accent-cyan)" stroke-width="1" fill="none" opacity="0.4" />
-              <path d="M 150 190 L 150 240 L 80 240" stroke="var(--accent-purple)" stroke-width="1" fill="none" opacity="0.4" />
-
-              <!-- Resistor component along Trace 1 -->
-              <g transform="translate(60, 105)">
-                <rect x="-6" y="-12" width="12" height="24" rx="2" fill="#060913" stroke="var(--accent-cyan)" stroke-width="1.5" />
-                <!-- Color bands -->
-                <line x1="-6" y1="-6" x2="6" y2="-6" stroke="#e63946" stroke-width="1.5" />
-                <line x1="-6" y1="0" x2="6" y2="0" stroke="#ffb703" stroke-width="1.5" />
-                <line x1="-6" y1="6" x2="6" y2="6" stroke="#2a9d8f" stroke-width="1.5" />
-              </g>
-              
-              <!-- Capacitor component along Trace 2 -->
-              <g transform="translate(240, 165)">
-                <line x1="-10" y1="-3" x2="10" y2="-3" stroke="var(--accent-purple)" stroke-width="2.5" />
-                <line x1="-10" y1="3" x2="10" y2="3" stroke="var(--accent-purple)" stroke-width="2.5" />
-                <!-- Lead lines -->
-                <line x1="0" y1="-15" x2="0" y2="-3" stroke="rgba(157, 78, 221, 0.4)" stroke-width="1.5" />
-                <line x1="0" y1="15" x2="0" y2="3" stroke="rgba(157, 78, 221, 0.4)" stroke-width="1.5" />
-              </g>
-
-              <!-- LED Diode component along Trace 3 -->
-              <g transform="translate(185, 60) rotate(90)">
-                <polygon points="-8,-8 -8,8 6,0" fill="#060913" stroke="var(--accent-cyan)" stroke-width="1.5" />
-                <line x1="6" y1="-8" x2="6" y2="8" stroke="var(--accent-cyan)" stroke-width="1.5" />
-                <!-- Glow arrow indicators -->
-                <path d="M -2 -14 L 3 -19" stroke="var(--accent-cyan)" stroke-width="1" fill="none" />
-                <path d="M 3 -19 L 0 -19 M 3 -19 L 3 -16" stroke="var(--accent-cyan)" stroke-width="1" fill="none" />
-              </g>
-
-              <!-- Mini Oscilloscope Screen along Trace 4 (Bottom-Left) -->
-              <g transform="translate(25, 215)">
-                <!-- Bezel -->
-                <rect x="0" y="0" width="55" height="40" rx="4" fill="#0a0f1d" stroke="rgba(157, 78, 221, 0.4)" stroke-width="1.5" />
-                <!-- Screen Grid -->
-                <line x1="0" y1="20" x2="55" y2="20" stroke="rgba(157, 78, 221, 0.15)" stroke-width="0.5" stroke-dasharray="2 2" />
-                <line x1="27.5" y1="0" x2="27.5" y2="40" stroke="rgba(157, 78, 221, 0.15)" stroke-width="0.5" stroke-dasharray="2 2" />
-                <!-- Oscilloscope Sine Wave Animation -->
-                <path class="oscilloscope-wave" d="M 2 20 Q 12 5 22 20 T 42 20 T 53 20" stroke="var(--accent-cyan)" stroke-width="1.8" fill="none" />
-              </g>
-
-              <!-- Target Pads (Nodes) at ends -->
-              <circle cx="30" cy="90" r="4" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5" />
-              <circle cx="30" cy="90" r="1.5" fill="var(--accent-cyan)" />
-              
-              <circle cx="270" cy="210" r="4" fill="none" stroke="var(--accent-purple)" stroke-width="1.5" />
-              <circle cx="270" cy="210" r="1.5" fill="var(--accent-purple)" />
-              
-              <circle cx="220" cy="60" r="4" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5" />
-              <circle cx="220" cy="60" r="1.5" fill="var(--accent-cyan)" />
-
-              <!-- Animated Electron Particles (flowing along trace paths) -->
-              <circle r="4" fill="var(--accent-cyan)" style="filter: drop-shadow(0 0 4px var(--accent-cyan));">
-                <animateMotion dur="2.8s" repeatCount="indefinite" path="M 110 150 L 60 150 L 60 90 L 30 90" />
-              </circle>
-              
-              <circle r="4" fill="var(--accent-purple)" style="filter: drop-shadow(0 0 4px var(--accent-purple));">
-                <animateMotion dur="3.5s" repeatCount="indefinite" path="M 190 150 L 240 150 L 240 210 L 270 210" />
-              </circle>
-
-              <circle r="4" fill="var(--accent-cyan)" style="filter: drop-shadow(0 0 4px var(--accent-cyan));">
-                <animateMotion dur="2.2s" repeatCount="indefinite" path="M 150 110 L 150 60 L 220 60" />
-              </circle>
-
-              <circle r="4" fill="var(--accent-purple)" style="filter: drop-shadow(0 0 4px var(--accent-purple));">
-                <animateMotion dur="3s" repeatCount="indefinite" path="M 150 190 L 150 240 L 80 240" />
-              </circle>
-
-              <!-- Central Microcontroller Chip (IC) -->
-              <!-- Outer pins -->
-              <!-- Top & Bottom Pins -->
-              <rect x="117" y="102" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="129" y="102" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="141" y="102" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="153" y="102" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="165" y="102" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="177" y="102" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
-              
-              <rect x="117" y="190" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="129" y="190" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="141" y="190" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="153" y="190" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="165" y="190" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="177" y="190" width="6" height="8" fill="rgba(255, 255, 255, 0.4)" />
-
-              <!-- Left & Right Pins -->
-              <rect x="102" y="117" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="102" y="129" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="102" y="141" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="102" y="153" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="102" y="165" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="102" y="177" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
-              
-              <rect x="190" y="117" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="190" y="129" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="190" y="141" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="190" y="153" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="190" y="165" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
-              <rect x="190" y="177" width="8" height="6" fill="rgba(255, 255, 255, 0.4)" />
-
-              <!-- Main IC body -->
-              <rect x="110" y="110" width="80" height="80" rx="8" fill="#070b19" stroke="var(--accent-cyan)" stroke-width="2.5" style="filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.3));" />
-              
-              <!-- IC Core/Die artwork -->
-              <rect x="125" y="125" width="50" height="50" rx="4" fill="none" stroke="rgba(157, 78, 221, 0.4)" stroke-width="1" />
-              <circle cx="150" cy="150" r="14" fill="none" stroke="var(--accent-purple)" stroke-width="1.5" stroke-dasharray="3 3" style="filter: drop-shadow(0 0 3px var(--accent-purple));" />
-              <circle cx="150" cy="150" r="5" fill="var(--accent-cyan)" style="filter: drop-shadow(0 0 5px var(--accent-cyan));" />
-              
-              <!-- Label on IC -->
-              <text x="150" y="132" fill="var(--text-secondary)" font-family="Courier, monospace" font-size="8" font-weight="bold" text-anchor="middle" letter-spacing="1">ARM</text>
-              <text x="150" y="175" fill="rgba(0, 240, 255, 0.6)" font-family="Courier, monospace" font-size="6" text-anchor="middle">S2-ECE</text>
-            </svg>
+          <div class="blueprint-container">
+            <div class="blueprint-drafting-lines"></div>
+            <div class="breadboard-wood-frame">
+              <img src="akshay_portrait.png" alt="Akshay C Portrait" class="breadboard-photo" />
+            </div>
           </div>
         </div>
       </div>
@@ -373,9 +236,9 @@
 
           <!-- Timeline Item: Education -->
           <div class="timeline-item">
-            <div class="timeline-dot" style="border-color: var(--accent-cyan); box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);"></div>
+            <div class="timeline-dot" style="border-color: var(--accent-copper); box-shadow: 0 0 10px rgba(207, 138, 79, 0.4);"></div>
             <div class="timeline-content glass-panel">
-              <span class="timeline-time" style="color: var(--accent-cyan);">2025 — Present</span>
+              <span class="timeline-time" style="color: var(--accent-copper);">2025 — Present</span>
               <h3 class="timeline-title">B.Tech in Electronics & Communication Engineering</h3>
               <p class="timeline-desc" style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.4rem;">
                 Nehru College of Engineering and Research Centre (NCERC)
@@ -785,7 +648,16 @@
   <footer class="footer">
     <div class="container footer-content">
       <a href="#hero" class="footer-logo">
-        <span>AKSHAY</span> C
+        <svg viewBox="0 0 24 24" class="footer-compass-logo" style="width: 22px; height: 22px; margin-right: 0.4rem; stroke: var(--accent-copper); fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
+          <circle cx="12" cy="4" r="2" />
+          <line x1="12" y1="6" x2="6" y2="20" />
+          <line x1="12" y1="6" x2="18" y2="20" />
+          <line x1="8.5" y1="14" x2="15.5" y2="14" />
+          <circle cx="12" cy="14" r="1.5" fill="currentColor" />
+          <line x1="6" y1="20" x2="5.5" y2="22" stroke-width="1.5" />
+          <line x1="18" y1="20" x2="18.5" y2="21.5" stroke-width="2.5" />
+        </svg>
+        <span>AKSHAY C</span>
       </a>
       
       <ul class="footer-links">

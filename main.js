@@ -76,8 +76,8 @@ function initNavbar() {
       if (element) {
         element.scrollIntoView({ behavior: 'smooth', block: 'center' });
         // Highlight border briefly to guide the user
-        element.style.borderColor = 'var(--accent-cyan)';
-        element.style.boxShadow = '0 0 25px rgba(0, 240, 255, 0.4)';
+        element.style.borderColor = 'var(--accent-copper)';
+        element.style.boxShadow = '0 0 25px rgba(207, 138, 79, 0.4)';
         setTimeout(() => {
           element.style.borderColor = '';
           element.style.boxShadow = '';
@@ -107,21 +107,24 @@ function initBackgroundCanvas() {
     constructor() {
       this.x = Math.random() * width;
       this.y = Math.random() * height;
-      // Circuit speed: slower and more grid-aligned (horizontal/vertical drift)
-      this.vx = (Math.random() - 0.5) * 0.4;
-      this.vy = (Math.random() - 0.5) * 0.4;
+      // Circuit speed: slower and more grid-aligned near-static drift
+      this.vx = (Math.random() - 0.5) * 0.05;
+      this.vy = (Math.random() - 0.5) * 0.05;
       this.size = Math.random() * 2 + 1;
-      this.color = Math.random() > 0.45 ? 'rgba(0, 240, 255, 0.6)' : 'rgba(157, 78, 221, 0.5)';
     }
 
     draw() {
+      // Outer copper contact pad
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size + 1.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(207, 138, 79, 0.35)';
+      ctx.fill();
+
+      // Inner gold center pin
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = this.color;
-      ctx.shadowColor = this.color;
-      ctx.shadowBlur = 4;
+      ctx.fillStyle = '#cfa054';
       ctx.fill();
-      ctx.shadowBlur = 0; // Reset
     }
 
     update() {
@@ -167,7 +170,7 @@ function initBackgroundCanvas() {
           }
           
           const alpha = (1 - dist / maxDistance) * 0.15;
-          ctx.strokeStyle = `rgba(0, 240, 255, ${alpha})`;
+          ctx.strokeStyle = `rgba(170, 91, 40, ${alpha})`;
           ctx.lineWidth = 0.8;
           ctx.stroke();
         }
